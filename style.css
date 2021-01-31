@@ -72,7 +72,6 @@ p {
 * {
     box-sizing: border-box;
 }
-/* Let's start by initialising your purple swatcha as a variable so it's easier to reuse */
 :root {
     --purple: #8B0FF8;
 }
@@ -84,13 +83,6 @@ p {
 .avatar {
     display: flex;
     justify-content: flex-end;
-}
-/* this is your new flex child. I've put a clipping mask in there, you can drop your image directly in or just replace with whatever you've like really
-.avatar-mask {
-    width: 200px;
-    height: 200px;
-    background-color: white;
-    border-radius: 50%;
 }
 /* Here I reset the margin on your h1 a bit because its pretty huge and bumping your avatar down too much */
 h1 {
