@@ -4,6 +4,76 @@ body {
     margin: 0;
     font-family: 'Hind Madurai', sans-serif;
 }
+
+* {
+    box-sizing: border-box;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 4fr 1fr 1fr 1fr;
+
+}
+
+:root {
+    --purple: #9008f4;
+}
+/* This gives you a simple class to add in your purple full stops etc. Best attached to something like a <span> */
+.purple {
+    color: var(--purple);
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 120px;
+    font-weight: 700;
+}
+h2 {
+    font-family: 'Lora', serif;
+    font-size: 50px;
+    font-weight: 700;
+    color: #9008f4;
+}
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+h4 {
+    font-family: 'Hind Madurai', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+h5 {
+    font-family: 'Hind Madurai', sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+}
+p {
+    font-family: 'Hind Madurai', sans-serif;
+    font-size: 19px;
+    font-weight: 300;
+}
+
+button {
+    background-color: white;
+    border: none;
+    color: var(--purple);
+    font-size: 22px;
+    font-weight: 400;
+    padding: 8px 0px;
+    border-radius: 24px;
+    transition: 240ms;
+    border: none;
+}
+button:hover {
+    background-color: var(--purple);
+    padding: 8px 24px;
+    color: white;
+}
+
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -50,35 +120,16 @@ li {
     color: black;
     margin: 90px;
 }
-h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 120px;
-    font-weight: 700;
-}
-h2 {
-    font-family: 'Lora', serif;
-    font-size: 30px;
-    font-weight: 700;
-}
-p {
-    font-family: 'Hind Madurai', sans-serif;
-    font-size: 19px;
-    font-weight: 300;
-}
-/*  */
-/* New stuff from Richard */
-/*  */
-/* Basically always want to turn this bad boy on, check the w3c docs if you're still scratching your head about box-sizing */
-* {
-    box-sizing: border-box;
-}
-:root {
-    --purple: #8B0FF8;
-}
-/* This gives you a simple class to add in your purple full stops etc. Best attached to something like a <span> */
-.purple {
-    color: var(--purple);
-}
+
+
+
+
+
+
+
+
+
+
 /* This is your new flex parent. We use justify-content: flex-end to send to to the right aka, the end of the flex parent */
 .avatar {
     display: flex;
@@ -92,23 +143,7 @@ h1 {
 .shadow-12 {
     box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 12px 17px 2px rgba(0, 0, 0, 0.14), 0px 5px 22px 4px rgba(0, 0, 0, 0.12);
 }
-/* Here's how you style buttons! */
-button {
-    background-color: white;
-    border: none;
-    color: var(--purple);
-    font-size: 18px;
-    font-weight: 550;
-    padding: 8px 0px;
-    border-radius: 24px;
-    transition: 240ms;
-    border: none;
-}
-button:hover {
-    background-color: var(--purple);
-    padding: 8px 24px;
-    color: white;
-}
+
 /* Let's get your skills section nice and flexy */
 .skills {
     display: flex;
