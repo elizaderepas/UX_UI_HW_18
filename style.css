@@ -182,8 +182,7 @@ h1 {
 
 .case-study1 .case-study2 .case-study3 {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-row-gap: 8em;
+    
 }
 
 
