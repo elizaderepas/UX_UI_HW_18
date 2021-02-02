@@ -16,6 +16,8 @@ body {
 
 }
 
+
+
 :root {
     --purple: #9008f4;
 }
@@ -175,3 +177,33 @@ h1 {
     flex-flow: row wrap;
     margin: 74px;
 }
+
+
+
+.case-study1 .case-study2 .case-study3 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-row-gap: 8em;
+}
+
+
+.casestudies {
+    display: grid;
+    margin: 150px;
+    width: 232px;
+    height: 7px;
+    background: #9008F4;
+    border-radius: 6px;
+}
+
+.workgrid {
+    display: grid;
+    padding: 100px;
+    grid-template-columns: 2fr 1fr;
+    grid-row-gap: 8em;
+}
+
+.workgrid > div {
+    padding: 1em;
+}
+
