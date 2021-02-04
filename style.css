@@ -9,15 +9,6 @@ body {
     box-sizing: border-box;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 4fr 1fr 1fr 1fr;
-
-}
-
-
-
 :root {
     --purple: #9008f4;
 }
@@ -75,7 +66,6 @@ button:hover {
     color: white;
 }
 
-
 ul {
     list-style-type: none;
     margin: 0;
@@ -87,20 +77,13 @@ a {
 img {
     width: 100%
 }
+
+/* NAV -------------------------------------------------------------------- */
 .nav-container {
     background: transparent 98%;
     background-color: white;
 }
-a {
-    color: black;
-}
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 70px;
-    margin: auto;
-    align-items: center;
-}
+
 .logo {
     color: black;
     font-weight: bold;
@@ -114,102 +97,208 @@ li {
     display: flex;
     justify-content: space-between;
     padding: 16px;
-    font family: 'Hind Madurai', sans-serif;
+    font-family: 'Hind Madurai', sans-serif;
     font-weight: 300;
     font-size: 22px;
 }
+a {
+    color: black;
+}
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 70px;
+    margin: auto;
+    align-items: center;
+}
+
+/* HERO ABOUT PAGE -------------------------------------------------------------------- */
+
 .hero {
     background: white;
     color: black;
     margin: 90px;
-}
+} 
 
-.rectangle {
-    display: flex;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    border-radius: 26px;
-
-
-}
-
-
-
-
-
-
-
-
-/* This is your new flex parent. We use justify-content: flex-end to send to to the right aka, the end of the flex parent */
 .avatar {
     display: flex;
     justify-content: flex-end;
 }
-/* Here I reset the margin on your h1 a bit because its pretty huge and bumping your avatar down too much */
+
 h1 {
     margin: 24px;
 }
-/* This is a very finely tuned shadow from my personal use elevation sustem. This is level 12 of 24 possible values. This will probably come up in class at some point but you can ask me more if you're curious
-.shadow-12 {
-    box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 12px 17px 2px rgba(0, 0, 0, 0.14), 0px 5px 22px 4px rgba(0, 0, 0, 0.12);
+
+.rectangle1 {
+    display: inline-flex;
+    background: #9008F4;
+    border-radius: 6px;
+    width: 100px;
+    height: 7px;
 }
 
-/* Let's get your skills section nice and flexy */
+.myskills {
+    display: inline-flex;
+    margin: 20px;
+}
+
 .skills {
     display: flex;
     flex-flow: row wrap;
     margin: 74px;
 }
-/* These are the flex children, we use flex-basis of 33% to set an 'initial' flex size of 1/3rd of the total available space. Pretty clever! google flex-basis to learn more. Flex-basis basically makes your flex children say "I WANT to be this big" so they'll try to do that before anything else */
+
 .skill {
     flex-grow: 1;
     flex-basis: 33%;
     padding: 16px;
+    
 }
-/* You will be learning about these tonight. This is a media query that says "well, a 3 way split is fine on a big screen, but we should only use 2 columns of flex items on screens smaller than 900px... */
+
+.rectangle2 {
+    display: inline-flex;
+    background: #9008F4;
+    border-radius: 6px;
+    width: 100px;
+    height: 7px;
+    
+}
+.designtools {
+    display: inline-flex;
+    margin: 20px;
+}
+
+.tools-list p {
+    flex-grow: 1;
+    flex-basis: 33%;
+    margin-inline-start: 120px;
+}
+
+.rectangle3 {
+    display: inline-flex;
+    background: #9008F4;
+    border-radius: 6px;
+    width: 100px;
+    height: 7px;
+    
+}
+.photography {
+    display: inline-flex;
+    margin: 20px;
+}
+
+main {
+    width: 100%;
+
+}
+
+.grid-container-cols-12 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.photo1 {
+    grid-column: 2 / 5;
+}
+
+.photo2 {
+    grid-column: 5 / 8;
+}
+
+.photo3 {
+    grid-column: 8 / 11;
+}
+
+.photo4 {
+    grid-column: 2 / 5;
+}
+
+.photo5 {
+    grid-column: 5 / 8;
+}
+
+.photo6 {
+    grid-column: 8 / 11;
+}
+
+
+
+footer div {
+    display: flex;
+    width: 100%;
+    bottom: 50px;
+    justify-content: center;
+        align-items: center;
+     
+  }
+
+  .name {
+    border-top: 1px solid var(--purple);
+    margin-top: 100px;
+    padding-top: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  .title {
+    padding-bottom: 15px;
+    font-family: 'Lora', serif;
+    font-size: 19px;
+    font-weight: 500;
+  }
+
+  .strapline {
+    font-family: 'Hind Madurai', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  .email a {
+    font-family: 'Hind Madurai', sans-serif;
+    font-size: 19px;
+    font-weight: 300;
+    color: #9008f4;
+    
+  }
+
+
+.socials {
+    display: flex;
+    align-items: center;
+
+}
+
+
 @media screen and (max-width: 900px) {
     .skill {
         flex-basis: 50%;
     }
 }
-/* ...and if we get really small, let's just forget about splitting this up at all and flatten things out */
+
 @media screen and (max-width: 640px) {
     .skill {
         flex-basis: 100%;
     }
 }
-/* You can see these media queries in action by resizing your window */
 
-.footer {
+/* HOMEPAGE */
+
+/* .rectangle {
     display: flex;
-    flex-flow: row wrap;
-    margin: 74px;
-}
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 26px;
+} */
 
+/* GRID -------------------------------------------------------------------- */
 
-
-.case-study1 .case-study2 .case-study3 {
+/* main {
     display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: (12, 1fr);
+    grid-gap: 1em;
     
-}
-
-
-.casestudies {
-    display: grid;
-    margin: 150px;
-    width: 232px;
-    height: 7px;
-    background: #9008F4;
-    border-radius: 6px;
-}
-
-.workgrid {
-    display: grid;
-    padding: 100px;
-    grid-template-columns: 2fr 1fr;
-    grid-row-gap: 8em;
-}
-
-.workgrid > div {
-    padding: 1em;
-}
-
+} */
